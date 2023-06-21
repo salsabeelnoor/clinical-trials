@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Introduction.css'
 const Introduction = () => {
+    const [active, setActive] = useState('phase1');
     return (
         <div className='bg-dark_gray sm:bg-white '>
             <div className='sm:container sm:mx-auto mx-3 pt-10'>
@@ -14,24 +15,7 @@ const Introduction = () => {
                 <p className='block font-open_sans mt-7 sm:text-dark_gray text-gray text-sm'>There are four phases of clinical
                     studies:</p>
             </div>
-            <div className='pt-3 grid grid-cols-4 gap-0 grid-container sm:container sm:mx-auto '>
-                <div className='align-middle'>
-                    <h1 className='text-center font-open_sans text-[22px] font-semibold text-light_gray'>Phase 1</h1>
-                    <hr className='sm:w-11/12 w-[200px] mx-auto border-0 h-1 bg-light_gray' />
-                </div>
-                <div className='align-middle'>
-                    <h1 className='text-center font-open_sans text-[22px] font-semibold text-light_gray'>Phase 2</h1>
-                    <hr className='sm:w-11/12 w-[200px] mx-auto border-0 h-1 bg-light_gray' />
-                </div>
-                <div className='align-middle'>
-                    <h1 className='text-center font-open_sans text-[22px] font-semibold text-light_green'>Phase 3</h1>
-                    <hr className='sm:w-11/12 w-[200px] mx-auto border-0 h-1 bg-light_green' />
-                </div>
-                <div className='align-middle'>
-                    <h1 className='text-center font-open_sans text-[22px] font-semibold text-light_gray'>Phase 4</h1>
-                    <hr className='sm:w-11/12 w-[200px] mx-auto border-0 h-1 bg-light_gray' />
-                </div>
-            </div>
+            
         </div>
     );
 };
