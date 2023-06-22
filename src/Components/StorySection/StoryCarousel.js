@@ -4,8 +4,7 @@ import arrow_right from '../../assets/Desktop/Video-block/right arrow/icon/arrow
 import play_btn_sm from '../../assets/Desktop/Video-block/component/video-player/icon/play_btn_sm.png'
 import carousel_img_mb from '../../assets/Mobile/Video-block/Video player-Mobile-component/video-1/Video player/carousel_img_sm_mb.jpg'
 import play_btn_sm_mb from '../../assets/Mobile/Video-block/play_btn_sm_mb.png'
-import video_1 from '../../assets/yt_shorts_1.mp4'
-import cover_img_1 from '../../assets/Em_1.jpg'
+import video_1 from '../../assets/yt_shorts3.mp4'
 import './StoryCarousel.css'
 
 const StoryCarousel = () => {
@@ -38,7 +37,7 @@ const StoryCarousel = () => {
                                     onClick={() => {
                                         handleActiveVideo('slide1')
                                     }} />
-                                    <img src={cover_img_1} className="object-cover w-full  cursor-pointer" alt=''
+                                    <img src={carousel_img_sm} className="object-cover w-full  cursor-pointer" alt=''
                                      onClick={() => {
                                         handleActiveVideo('slide1')
                                     }}   />
@@ -98,7 +97,7 @@ const StoryCarousel = () => {
                                     onClick={() => {
                                         handleActiveVideo('slide2')
                                     }} />
-                                    <img src={cover_img_1} className="object-cover w-full  cursor-pointer" alt=''
+                                    <img src={carousel_img_sm} className="object-cover w-full  cursor-pointer" alt=''
                                         onClick={() => {
                                             handleActiveVideo('slide2')
                                         }} />
@@ -155,7 +154,7 @@ const StoryCarousel = () => {
                                     onClick={() => {
                                         handleActiveVideo('slide3')
                                     }} />
-                                    <img src={cover_img_1} className="object-cover w-full  cursor-pointer" alt=''
+                                    <img src={carousel_img_sm} className="object-cover w-full  cursor-pointer" alt=''
                                         onClick={() => {
                                             handleActiveVideo('slide3')
                                         }} />
