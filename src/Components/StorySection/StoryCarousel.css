@@ -15,3 +15,14 @@
 .carousel-dot.active {
   background-color: #09958B;
 }
+@media (max-width: 640px) {
+  .video-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .video-mobile {
+    display: none;
+  }
+}
