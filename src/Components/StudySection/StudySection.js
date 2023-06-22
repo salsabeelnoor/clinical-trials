@@ -5,17 +5,28 @@ import phase_2 from '../../assets/Mobile/Group/phase_2.png'
 import phase_3 from '../../assets/Mobile/Group/phase_3.png'
 import phase_4 from '../../assets/Mobile/Group/phase_4.png'
 import frame from '../../assets/Desktop/frame4.png'
+import './StudySection.css'
 const StudySection = () => {
     const [phase, setPhase] = useState("1");
     const [framePosition, setFramePosition] = useState(0);
-
+    console.log(framePosition)
     const handleClick = (phase) => {
+        const screenWidth = window.innerWidth;
+        console.log(screenWidth)
         setPhase(phase);
         if (phase === '1') {
             setFramePosition(0); // Initial position
-          } else {
-            setFramePosition(framePosition+180); // Move 30px to the right
-          }
+        }
+        else if (phase === '2'){
+            setFramePosition(190)
+        }
+        else if( phase === '3'){
+            setFramePosition(380)
+        }
+        else {
+            setFramePosition(550); //framePosition + 190
+        }
+
     };
     console.log(phase)
     return (
@@ -59,9 +70,9 @@ const StudySection = () => {
                         and in one site in the world. Galapagos Phase 1 clinical trials are therefore not included on this site; however,
                         they are published in government public registries.
                     </p>
-                    <div className="">
-                        <img className='pl-7 object-cover sm:block hidden' src={four_phases_sm} alt="" />
-                        <img src={frame} alt="" className="mt-[-210px]" style={{ marginLeft: `${framePosition}px` }}></img>
+                    <div className="sm:block hidden">
+                        <img className='pl-7 object-cover ' src={four_phases_sm} alt="" />
+                        <img src={frame} alt="" className="mt-[-210px] frame-img" style={{ marginLeft: `${framePosition}px` }}></img>
                     </div>
 
                     {/* <img className='sm:hidden block mx-auto pt-6' src={phase_4} alt="" /> */}
