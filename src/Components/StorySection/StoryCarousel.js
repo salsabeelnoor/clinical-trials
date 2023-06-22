@@ -15,8 +15,11 @@ const StoryCarousel = () => {
         setActiveVideo(false)
     };
     const handleActiveVideo = (slideId) => {
-        if(slideId === 'slide1' || slideId === 'slide2' || slideId === 'slide3'){
+        if (slideId === 'slide1' || slideId === 'slide2' || slideId === 'slide3') {
             setActiveVideo(true);
+        }
+        else {
+            setActiveVideo(false)
         }
     }
     return (
@@ -34,13 +37,13 @@ const StoryCarousel = () => {
                                         }} />
                                     <img className='w-1/12 absolute transform -translate-x-1/2 -translate-y-3/4 
                                     top-[120px] left-1/2  block  sm:hidden' src={play_btn_sm_mb} alt=""
-                                    onClick={() => {
-                                        handleActiveVideo('slide1')
-                                    }} />
+                                        onClick={() => {
+                                            handleActiveVideo('slide1')
+                                        }} />
                                     <img src={carousel_img_sm} className="object-cover w-full  cursor-pointer" alt=''
-                                     onClick={() => {
-                                        handleActiveVideo('slide1')
-                                    }}   />
+                                        onClick={() => {
+                                            handleActiveVideo('slide1')
+                                        }} />
                                 </>
                             )
                         }
@@ -48,13 +51,13 @@ const StoryCarousel = () => {
                             activeVideo && (
                                 <>
                                     <video className="object-fit w-full video-desktop" controls
-                                        autoPlay={activeVideo} 
+
                                         onEnded={() => setActiveVideo(false)}
-                                        >
+                                    >
                                         <source src={video_1} type="video/mp4" />
                                     </video>
                                     <video className="object-cover w-full block video-mobile" controls
-                                        autoPlay={activeVideo} 
+
                                         onEnded={() => setActiveVideo(false)}>
                                         <source src={video_1} type="video/mp4" />
                                     </video>
@@ -89,14 +92,14 @@ const StoryCarousel = () => {
                                 <>
                                     <img className='w-1/12 absolute transform -translate-x-1/2 -translate-y-1/2 
                                     top-1/2 right-2/4 sm:block hidden cursor-pointer' src={play_btn_sm} alt=""
-                                    onClick={() => {
-                                        handleActiveVideo('slide2')
-                                    }} />
+                                        onClick={() => {
+                                            handleActiveVideo('slide2')
+                                        }} />
                                     <img className='w-1/12 absolute transform -translate-x-1/2 -translate-y-3/4 
                                     top-[120px] left-1/2  block  sm:hidden' src={play_btn_sm_mb} alt=""
-                                    onClick={() => {
-                                        handleActiveVideo('slide2')
-                                    }} />
+                                        onClick={() => {
+                                            handleActiveVideo('slide2')
+                                        }} />
                                     <img src={carousel_img_sm} className="object-cover w-full  cursor-pointer" alt=''
                                         onClick={() => {
                                             handleActiveVideo('slide2')
@@ -108,11 +111,11 @@ const StoryCarousel = () => {
                             activeVideo && (
                                 <>
                                     <video className="object-fit w-full video-desktop" controls
-                                        autoPlay={activeVideo} onEnded={() => setActiveVideo(false)}>
+                                        onEnded={() => setActiveVideo(false)}>
                                         <source src={video_1} type="video/mp4" />
                                     </video>
                                     <video className="object-cover w-full video-mobile" controls
-                                        autoPlay={activeVideo} onEnded={() => setActiveVideo(false)}>
+                                        onEnded={() => setActiveVideo(false)}>
                                         <source src={video_1} type="video/mp4" />
                                     </video>
                                 </>
@@ -146,14 +149,14 @@ const StoryCarousel = () => {
                                 <>
                                     <img className='w-1/12 absolute transform -translate-x-1/2 -translate-y-1/2 
                                     top-1/2 right-2/4 sm:block hidden cursor-pointer' src={play_btn_sm} alt=""
-                                    onClick={() => {
-                                        handleActiveVideo('slide3')
-                                    }} />
+                                        onClick={() => {
+                                            handleActiveVideo('slide3')
+                                        }} />
                                     <img className='w-1/12 absolute transform -translate-x-1/2 -translate-y-3/4 
                                     top-[120px] left-1/2  block  sm:hidden' src={play_btn_sm_mb} alt=""
-                                    onClick={() => {
-                                        handleActiveVideo('slide3')
-                                    }} />
+                                        onClick={() => {
+                                            handleActiveVideo('slide3')
+                                        }} />
                                     <img src={carousel_img_sm} className="object-cover w-full  cursor-pointer" alt=''
                                         onClick={() => {
                                             handleActiveVideo('slide3')
@@ -165,11 +168,11 @@ const StoryCarousel = () => {
                             activeVideo && (
                                 <>
                                     <video className="object-fit w-full video-desktop" controls
-                                        autoPlay={activeVideo} onEnded={() => setActiveVideo(false)}>
+                                        onEnded={() => setActiveVideo(false)}>
                                         <source src={video_1} type="video/mp4" />
                                     </video>
                                     <video className="object-cover w-full video-mobile" controls
-                                        autoPlay={activeVideo} onEnded={() => setActiveVideo(false)}>
+                                        onEnded={() => setActiveVideo(false)}>
                                         <source src={video_1} type="video/mp4" />
                                     </video>
                                 </>
